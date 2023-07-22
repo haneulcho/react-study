@@ -20,7 +20,7 @@ export const VideoList = ({ awardsId, items }: Props) => {
       items.filter((item) => {
         return item.awards_no === awardsId;
       }),
-    [awardsId, items],
+    [awardsId, items]
   );
 
   const maxPage = useMemo(() => Math.ceil(filteredItems.length / itemPerPage), [filteredItems]);
@@ -37,21 +37,29 @@ export const VideoList = ({ awardsId, items }: Props) => {
     <div>
       {listItems.length > 0 ? (
         <>
-          <ul>
+          <ul className="replay-list">
             {listItems.map(({ id, image, duration_display_time, title }) => {
               return (
-                <VideoListItem key={id} image={image} duration_display_time={duration_display_time} title={title} />
+                <VideoListItem
+                  key={id}
+                  image={image}
+                  duration_display_time={duration_display_time}
+                  title={title}
+                />
               );
             })}
           </ul>
           {page < maxPage && (
-            <button
-              type="button"
-              className="px-4 py-2 text-white bg-indigo-500 rounded-md"
-              onClick={() => loadMoreItems()}
-            >
-              더보기 {page} / {maxPage}
-            </button>
+            <div className="list-more">
+              <a
+                type="button"
+                className="box-btn"
+                onClick={() => loadMoreItems()}
+              >
+                <span>더보기</span>
+                <em className="ico-more"></em>
+              </a>
+            </div>
           )}
         </>
       ) : (

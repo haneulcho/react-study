@@ -1,3 +1,9 @@
+import { HeaderNav } from '@/components/header';
+
 export const Header = () => {
-  return <p></p>;
+  return (
+    <>
+      <HeaderNav />
+    </>
+  );
 };

@@ -6,7 +6,8 @@
     "winner": {
       "image": "https://fs.jtbc.co.kr/event-admin/baeksang/2023/04/05160214_93998.jpg",
       "award_name": "대상",
-      "title": "박은빈"
+      "title": "박은빈",
+      "sub_title":"이상한 변호사 우영우"
     },
     "list": [
       {
@@ -205,7 +206,8 @@
     "winner": {
       "image": "https://fs.jtbc.co.kr/event-admin/baeksang/2023/04/05170515_18892.jpg",
       "award_name": "백상연극상",
-      "title": "작품/당선자 없음"
+      "title": "작품/당선자 없음",
+      "sub_title": "두산아트센터"
     },
     "list": [
       {
