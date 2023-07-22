@@ -6,18 +6,13 @@ export const TabListItem = ({ title, pathname, isDefaultItem }: TabItemProps) =>
   const { awards_id } = useParams();
 
   return (
-    <li key={pathname}>
-      <NavLink to={pathname}>
-        {({ isActive }) => (
-          <span
-            className={
-              isActive || (!awards_id && isDefaultItem) ? 'text-blue-500 font-bold underline' : 'text-gray-900'
-            }
-          >
-            {title}
-          </span>
-        )}
-      </NavLink>
-    </li>
+    <NavLink
+      to={pathname}
+      className={({ isActive }) =>
+        isActive || (!awards_id && isDefaultItem) ? 'box-btn timeof2 on' : 'box-btn timeof1'
+      }
+    >
+      <span>{title}</span>
+    </NavLink>
   );
 };
