@@ -6,6 +6,7 @@ import { Home } from '@/pages/Home';
 import { Notice } from '@/pages/Notice';
 import { Replay } from '@/pages/Replay';
 import { Winners } from '@/pages/Winners';
+import { BoardDetail } from '@/components/notice/BoardDetail';
 
 export const routes: RouteObject[] = [
   // 첫 화면 (/)
@@ -50,6 +51,12 @@ export const routes: RouteObject[] = [
   {
     path: 'notice',
     element: <Notice />,
+    children: [
+      {
+        path: ':id',
+        element: <BoardDetail />,
+      },
+    ],
   },
 ];
 
